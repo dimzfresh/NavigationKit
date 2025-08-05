@@ -1,0 +1,11 @@
+🚀 A powerful SwiftUI navigation framework with coordinator pattern for iOS 16+
+
+Features:
+• Coordinator Pattern for clean navigation logic
+• Type-safe navigation with compile-time safety
+• Multiple presentation styles (push, sheet, full-screen)
+• Deep link support
+• SwiftUI native with iOS 16+ features
+• Thread-safe with MainActor compliance
+
+Perfect for complex iOS apps requiring sophisticated navigation management. 
