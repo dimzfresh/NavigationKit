@@ -20,7 +20,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -28,37 +28,37 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
             font-weight: 700;
         }
         
         .header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
         }
         
         .content {
             background: white;
             border-radius: 12px;
-            padding: 3rem;
+            padding: 2rem;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
         
         .feature {
             background: #f8f9fa;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 8px;
             border-left: 4px solid #667eea;
         }
@@ -66,6 +66,12 @@
         .feature h3 {
             color: #667eea;
             margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: #586069;
         }
         
         .code-block {
@@ -80,7 +86,7 @@
         .code-block pre {
             margin: 0;
             font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         .btn {
@@ -92,38 +98,44 @@
             border-radius: 6px;
             font-weight: 600;
             transition: background 0.3s;
+            margin: 0.5rem;
         }
         
         .btn:hover {
             background: #5a6fd8;
         }
         
-        .btn-secondary {
-            background: #6c757d;
-        }
-        
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-        
         .buttons {
             text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .buttons .btn {
-            margin: 0 0.5rem;
+            margin: 1.5rem 0;
         }
         
         .architecture {
             background: #f8f9fa;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 8px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             font-family: monospace;
             white-space: pre;
             overflow-x: auto;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+        }
+        
+        .requirements {
+            background: #e8f4fd;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .requirements h3 {
+            color: #0366d6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .requirements ul {
+            margin-left: 1rem;
         }
     </style>
 </head>
@@ -131,31 +143,31 @@
     <div class="container">
         <div class="header">
             <h1>🚀 NavigationKit</h1>
-            <p>A powerful SwiftUI navigation framework with coordinator pattern</p>
+            <p>SwiftUI Navigation Framework with Coordinator Pattern</p>
         </div>
         
         <div class="content">
             <h2>Overview</h2>
-            <p>NavigationKit is a modern SwiftUI navigation framework that provides a clean, coordinator-based architecture for managing complex navigation flows in iOS applications. Built specifically for iOS 16+ with full SwiftUI support.</p>
+            <p>NavigationKit is a modern SwiftUI navigation framework that provides a clean, coordinator-based architecture for managing complex navigation flows in iOS applications.</p>
             
             <div class="buttons">
                 <a href="https://github.com/dimzfresh/NavigationKit" class="btn">View on GitHub</a>
-                <a href="https://github.com/dimzfresh/NavigationKit/blob/main/README.md" class="btn btn-secondary">Documentation</a>
+                <a href="https://github.com/dimzfresh/NavigationKit/blob/main/README.md" class="btn">Documentation</a>
             </div>
             
             <h2>Key Features</h2>
             <div class="features">
                 <div class="feature">
                     <h3>🎯 Coordinator Pattern</h3>
-                    <p>Clean separation of navigation logic from view presentation using the coordinator pattern.</p>
+                    <p>Clean separation of navigation logic from view presentation.</p>
                 </div>
                 <div class="feature">
                     <h3>🔒 Type-Safe Navigation</h3>
-                    <p>Compile-time safety for all navigation operations with strong typing.</p>
+                    <p>Compile-time safety for all navigation operations.</p>
                 </div>
                 <div class="feature">
-                    <h3>📱 Multiple Presentation Styles</h3>
-                    <p>Support for push, sheet, full-screen, and custom presentation styles.</p>
+                    <h3>📱 Multiple Styles</h3>
+                    <p>Push, sheet, full-screen, and custom presentations.</p>
                 </div>
                 <div class="feature">
                     <h3>🔗 Deep Link Support</h3>
@@ -163,11 +175,11 @@
                 </div>
                 <div class="feature">
                     <h3>⚡ SwiftUI Native</h3>
-                    <p>Designed specifically for SwiftUI with iOS 16+ features.</p>
+                    <p>Designed specifically for SwiftUI with iOS 16+.</p>
                 </div>
                 <div class="feature">
                     <h3>🛡️ Thread-Safe</h3>
-                    <p>MainActor compliance ensures thread-safe navigation operations.</p>
+                    <p>MainActor compliance ensures thread-safe operations.</p>
                 </div>
             </div>
             
@@ -230,12 +242,14 @@ final class MainCoordinator: BaseCoordinator {
 │                                                             │
 └─────────────────────────────────────────────────────────────┘</div>
             
-            <h2>Requirements</h2>
-            <ul>
-                <li>iOS 16.0+</li>
-                <li>Swift 5.10+</li>
-                <li>Xcode 15.0+</li>
-            </ul>
+            <div class="requirements">
+                <h3>📋 Requirements</h3>
+                <ul>
+                    <li>iOS 16.0+</li>
+                    <li>Swift 5.10+</li>
+                    <li>Xcode 15.0+</li>
+                </ul>
+            </div>
             
             <div class="buttons">
                 <a href="https://github.com/dimzfresh/NavigationKit" class="btn">Get Started</a>

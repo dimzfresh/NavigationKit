@@ -2,6 +2,8 @@
 
 A powerful SwiftUI navigation framework that provides a clean, coordinator-based architecture for managing complex navigation flows in iOS applications.
 
+🌐 **[View Documentation Site](https://dimzfresh.github.io/NavigationKit/)** | 📖 **[Full Documentation](https://github.com/dimzfresh/NavigationKit/blob/main/README.md)**
+
 ## Requirements
 
 - iOS 16.0+
